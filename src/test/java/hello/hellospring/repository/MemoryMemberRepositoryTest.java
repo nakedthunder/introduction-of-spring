@@ -23,7 +23,7 @@ class MemoryMemberRepositoryTest {
 
     @AfterEach
     public void afterEach() {
-        //MemoryMemberRepository 클래스에서 만든 store.clear()를 호출해주는 것 
+        //MemoryMemberRepository 클래스에서 만든 store.clear()를 호출해주는 것
         repository.clearStore();
     }
 
