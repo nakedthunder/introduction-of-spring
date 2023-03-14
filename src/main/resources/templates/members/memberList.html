@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- 타임리프가 본격적으로 동작을 하는데, 템플릿엔진이 ${members} -> model안에 있는 값을 꺼내는 것
+  컨트롤러에서 넘어갈때 model안에다가 "members"라는 키로 list로 모든 회원을 조회해서 담아놨다.
+  th:each로 반복문을 돌면서 실행한다. java의 forEach가 유사함
+-->
+<body>
+<div class="container">
+  <div>
+    <table>
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>이름</th> </tr>
+      </thead>
+      <tbody>
+      <tr th:each="member : ${members}">
+        <td th:text="${member.id}"></td>
+        <td th:text="${member.name}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div> <!-- /container -->
+</body>
+</html>
